@@ -1,3 +1,7 @@
+* {
+    border: 1px solid red;
+}
+
 :root {
     --primary-clr: #443850;
     --line-height: 1.3;
@@ -111,7 +115,7 @@
     color: var(--primary-clr);
     font-weight: 700;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 0.5rem;
+    /* padding-bottom: 0.5rem; */
     line-height: var(--line-height);
   }
   
@@ -264,23 +268,41 @@
     color: var(--primary-clr);
   }
   
+  .result-box caption {
+    margin: 0.7rem auto;
+    font-weight: bold;
+    color: var(--primary-clr);
+    font-size: 1.7rem;
+  }
+
   .result-box table {
     width: 90%;
     max-width: 350px;
     border-collapse: collapse;
     margin: 1rem auto;
   }
-  .result-box table td {
+  .result-box table td, .result-box table th {
     border: 1px solid #ccc;
     text-align: left;
-    padding: 0.2rem 1rem;
+    padding: 0 1rem;
   }
-  .result-box table td:nth-child(even) {
+
+  .result-box table td:first-child, .result-box table td:last-child, .result-box table th:first-child, .result-box table th:last-child {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 0;
+  }
+
+  .result-box table img {
+    width: 20px;
+    margin: 0 auto;
+  }
+  /* .result-box table td:nth-child(even) {
     width: 1%;
   }
   .result-box table td:nth-child(odd) {
     width: 30%;
-  }
+  } */
   .results-btn-container {
     display: flex;
     gap: 1rem;
@@ -302,6 +324,42 @@
     display: none;
   }
   
+  @media (max-width: 768px) {
+    th {
+      display: none;
+    }
+    
+    td {
+      display: block;
+    }
+    tr:not(:first-child)::before {
+      content: "\A"; 
+      white-space: pre;
+    }
+    
+    td::before{
+      content: attr(data-cell);
+      font-weight: bold;
+    }
+  
+  td:first-child{
+    text-align: center;
+    background-color: #ccc;
+  }
+  
+    .result-box .btn {
+      margin-bottom: 1 rem;
+    }
+  
+    body {
+      padding: 1rem;
+    }
+  
+    .custom-box {
+      margin: 1rem auto;
+    }
+  }
+
   @media (max-width: 480px) {
     .result-box .btn {
       margin-bottom: 1 rem;

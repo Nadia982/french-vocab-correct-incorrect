@@ -8,7 +8,10 @@ const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
 const nextButton = document.querySelector(".next-btn");
 const button = document.querySelector(".btn");
-const questionLimit = questions.length;
+questionLimit = 5;
+// const questionLimit = questions.length;
+const questionsAskedContainer = document.querySelector(".questions-asked-container");
+
 
 let questionCounter = 0;
 let currentQuestion;
@@ -16,6 +19,9 @@ let availableQuestions = [];
 let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
+let questionsAskedList = [];
+let yourAnswersList = [];
+
 
 // add the questions to the availableQuestions array
 function setAvailableQuestions() {
@@ -39,6 +45,7 @@ function getNewQuestion() {
   currentQuestion = questionIndex;
   //set question text
   questionText.innerHTML = currentQuestion.q;
+  questionsAskedList.push(currentQuestion);
   setTimeout(speak, 500);
 
   // get the position of "QuestionIndex" from the "AvailableQuestions" array
@@ -75,7 +82,7 @@ function getNewQuestion() {
   //create options in html
   for (let i = 0; i < optionsLength; i++) {
     const optionIndex =
-    availableOptions[i];
+    availableOptions[0];
     //   availableOptions[Math.floor(Math.random() * availableOptions.length)];
 
     //get the position of optionIndex from availableOptions
@@ -95,23 +102,29 @@ function getNewQuestion() {
     optionContainer.appendChild(option);
     option.setAttribute("onclick", "getResult(this)");
 
-    option.addEventListener("keydown", pressEnterToGetResult);
+    // option.addEventListener("keydown", pressEnterToGetResult);
 
-    function pressEnterToGetResult(e) {
-      if (e.key == "Enter") {
-        option.removeEventListener("keydown", pressEnterToGetResult);
-        getResult(this);
-        unclickableOptions();
-      }
-    }
+    // function pressEnterToGetResult(e) {
+    //   if (e.key == "Enter") {
+    //     option.removeEventListener("keydown", pressEnterToGetResult);
+    //     getResult(this);
+    //     unclickableOptions();
+    //   }
+    // }
   }
-  optionContainer.children[0].focus();
+  readBtn.focus();
+//   optionContainer.children[0].focus();
   questionCounter++;
 }
 
 function getResult(element) {
   unclickableOptions();
   const id = parseInt(element.id);
+
+  const answerText = element.innerHTML;
+  yourAnswersList.push(answerText);
+  console.log(yourAnswersList);
+
   //get the answer by comparing the id of the clicked option
   if (id === currentQuestion.answer) {
     // add green colour if user selects correct option
@@ -192,23 +205,82 @@ function quizOver() {
 
 //get the quiz result
 function quizResult() {
-  resultBox.querySelector(".total-question").innerHTML = questionLimit;
-  resultBox.querySelector(".total-attempts").innerHTML = attempt;
-  resultBox.querySelector(".correct-answers").innerHTML = correctAnswers;
-  resultBox.querySelector(".wrong-answers").innerHTML =
-    attempt - correctAnswers;
-  const percentage = (correctAnswers / questionLimit) * 100;
-  resultBox.querySelector(".percent-correct").innerHTML =
-    percentage.toFixed(2) + "%";
   resultBox.querySelector(".total-score").innerHTML =
     correctAnswers + "/" + questionLimit;
+    displayQuestions();
 }
 
+function displayQuestions() {
+    for (let i = 0; i < questionsAskedList.length; i++) {
+      //create table row for each question
+      const questionRow = document.createElement("tr");
+  
+      //create a cell to show the question number
+      const questionNoCell = document.createElement("td")
+      questionNoCell.textContent = i+1;
+      questionNoCell.setAttribute("data-cell", "Question no: ");
+  
+      //create a cell to show the question text
+      const questionAskedCell = document.createElement("td");
+    //   if (questionsAskedList[i].hasOwnProperty("q3")) {
+    //     questionAskedCell.innerHTML =
+    //       questionsAskedList[i].q +
+    //       " " +
+    //       questionsAskedList[i].q2 +
+    //       " " +
+    //       questionsAskedList[i].q3;
+    //   } else if (questionsAskedList[i].hasOwnProperty("q2")) {
+    //     let q2QuestionContents = questionsAskedList[i].q + " " + questionsAskedList[i].q2;
+    //     console.log(q2QuestionContents);
+    //     questionAskedCell.innerHTML = q2QuestionContents; 
+    //   } else {
+        questionAskedCell.innerHTML = questionsAskedList[i].q;
+    //   }
+      questionAskedCell.setAttribute("data-cell", "Question: ");
+  
+      // create a table cell to show the given answer
+      const yourAnswerCell = document.createElement("td");
+      yourAnswerCell.innerHTML = yourAnswersList[i];
+      yourAnswerCell.setAttribute("data-cell", "You answered: ");
+      
+      //create a table cell to show the correct answer
+      const correctAnswerCell = document.createElement("td");
+      correctAnswerCell.innerHTML = questionsAskedList[i].options[questionsAskedList[i].answer];
+      correctAnswerCell.setAttribute("data-cell", "Correct answer: ");
+  
+      //create a table cell to show if the given answer was right or wrong
+      const resultCell = document.createElement("td");
+      // resultCell.innerHTML = "<p>Hello</p>";
+      if(yourAnswerCell.innerHTML === correctAnswerCell.innerHTML) {
+        resultCell.innerHTML = "<img src='./images/correct.png' alt = 'correct' width='30'/>";
+        resultCell.classList.add("correct");
+      } else {
+        resultCell.innerHTML = "<img src='./images/incorrect.png' alt = 'incorrect' width='20'/>";
+        resultCell.classList.add("incorrect");
+      }
+      //append the created cells to the question row
+      questionRow.appendChild(questionNoCell);    
+      questionRow.appendChild(questionAskedCell);
+    //   questionRow.appendChild(yourAnswerCell);
+    //   questionRow.appendChild(correctAnswerCell);
+      questionRow.appendChild(resultCell);
+      //Add the new row to questionsAskedContainer
+      questionsAskedContainer.appendChild(questionRow);
+    }
+  }
+  
+  function removeQuestions() {
+    questionsAskedContainer.textContent = "";
+  }
+  
 function resetQuiz() {
   questionCounter = 0;
   correctAnswers = 0;
   attempt = 0;
   availableQuestions = [];
+  questionsAskedList = [];
+  yourAnswersList = [];
+  removeQuestions();
 }
 
 function tryAgainQuiz() {
@@ -220,6 +292,7 @@ function tryAgainQuiz() {
 
   resetQuiz();
   startQuiz();
+    
 }
 
 function goToHome() {

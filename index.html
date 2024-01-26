@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz App</title>
+    <title>French words</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
@@ -23,13 +23,17 @@
       <div class="question-number"></div>
       <div class="question-container">
         <div class="question-text" lang="fr"></div>
+        
         <button id="read-btn" class="btn">
           <img width="30" src="./images/speaker.png" alt="" /> Read the word
         </button>
         
       </div>
       <select name="" id="voice-select"></select>
-      <div class="option-container"></div>
+      <p>Did you know the meaning of this word?</p>
+      <div class="option-container">
+        
+      </div>
       <div class="next-and-answer-indicator-container">
         <div class="next-btn-container">
           <button type="button" class="next-btn btn" onclick="next()">
@@ -40,42 +44,35 @@
       </div>
     </div>
     <div class="result-box custom-box hide">
-      <h1>Quiz results</h1>
-      <table>
-        <tr>
-          <td>Total questions</td>
-          <td><span class="total-question"></span></td>
-        </tr>
-        <tr>
-          <td>Questions attempted</td>
-          <td><span class="total-attempts"></span></td>
-        </tr>
-        <tr>
-          <td>Correct answers</td>
-          <td><span class="correct-answers"></span></td>
-        </tr>
-        <tr>
-          <td>Wrong answers</td>
-          <td><span class="wrong-answers"></span></td>
-        </tr>
-        <tr>
-          <td>Percent correct</td>
-          <td><span class="percent-correct"></span></td>
-        </tr>
-        <tr>
-          <td>Total score</td>
-          <td><span class="total-score"></span></td>
-        </tr>
-      </table>
-      <div class="results-btn-container">
-        <button type="button" class="btn" onclick="tryAgainQuiz()">
-          Try again
-        </button>
-        <button type="button" class="btn" onclick="goToHome()">
-          Go to home
-        </button>
+        <h1>Quiz results</h1>
+        <div class="total-score-container">
+          <p class="total-score-heading">Total score:</p>
+          <p class="total-score"></p>
+        </div>
+        <div class="btn-container">
+          <button type="button" class="btn" onclick="tryAgainQuiz()">
+            Try again
+          </button>
+          <button type="button" class="btn" onclick="goToHome()">
+            Go to home
+          </button>
+        </div>
+  <!-- <h2>Quiz summary</h2> -->
+        
+          <table>
+            <caption>Quiz summary</caption>
+            <tr>
+              <th>No.</th>
+              <th>French</th>
+              <!-- <th>Your Answer</th>
+              <th>Correct Answer</th> -->
+              <th>Result</th>
+            </tr>
+            <tbody class="questions-asked-container"></tbody>
+          </table>
+        
       </div>
-    </div>
+  
     <script src="js/questions.js"></script>
     <script src="js/app.js"></script>
   </body>
