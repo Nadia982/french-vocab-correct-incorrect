@@ -75,7 +75,8 @@ function getNewQuestion() {
   //create options in html
   for (let i = 0; i < optionsLength; i++) {
     const optionIndex =
-      availableOptions[Math.floor(Math.random() * availableOptions.length)];
+    availableOptions[i];
+    //   availableOptions[Math.floor(Math.random() * availableOptions.length)];
 
     //get the position of optionIndex from availableOptions
     const index2 = availableOptions.indexOf(optionIndex);
@@ -88,7 +89,6 @@ function getNewQuestion() {
     option.id = optionIndex;
     option.style.animationDelay = animationDelay + "s";
   
-
     animationDelay = animationDelay + 0.1;
 
     option.className = "option";

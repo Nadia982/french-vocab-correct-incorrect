@@ -88,7 +88,7 @@
   }
   
   .btn:focus, .btn:hover{
-    filter: brightness(80%);
+    filter: brightness(130%);
   }
   
   .quiz-box .next-and-answer-indicator-container {
@@ -99,6 +99,7 @@
   
   .next-btn {
     margin: 0;
+    outline: 1px solid white;
   }
   
   .next-btn.hide {
