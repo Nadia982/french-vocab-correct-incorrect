@@ -1,6 +1,6 @@
-* {
+/* * {
     border: 1px solid red;
-}
+} */
 
 :root {
     --primary-clr: #443850;
@@ -91,7 +91,12 @@
     display: inline-block;
   }
   
-  .btn:focus, .btn:hover{
+
+  #read-btn:focus {
+    filter: brightness(150%);
+  }
+
+  .btn:focus, .btn:hover, #read-btn:hover{
     filter: brightness(130%);
   }
   
@@ -123,7 +128,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     margin-bottom: 1rem;
   }
   .quiz-box .question-text, .quiz-box .translation-text {
@@ -131,7 +136,6 @@
     width: 50%;
     color: #000;
     line-height: var(--line-height);
-    /* padding: .8rem 0; */
     margin: 0;
     font-weight: 700;
   }
