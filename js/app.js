@@ -1,5 +1,6 @@
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
+const translationText = document.querySelector(".translation-text");
 
 const optionContainer = document.querySelector(".option-container");
 const answersIndicatorContainer = document.querySelector(".answers-indicator");
@@ -8,8 +9,8 @@ const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
 const nextButton = document.querySelector(".next-btn");
 const button = document.querySelector(".btn");
-questionLimit = 5;
-// const questionLimit = questions.length;
+// questionLimit = 2;
+const questionLimit = questions.length;
 const questionsAskedContainer = document.querySelector(".questions-asked-container");
 
 
@@ -33,6 +34,7 @@ function setAvailableQuestions() {
 
 //set question number, question text and answer options
 function getNewQuestion() {
+  translationText.classList.add("hide");  
   nextButton.classList.add("hide");
   //set question number
   questionNumber.innerHTML = `Question ${
@@ -45,6 +47,7 @@ function getNewQuestion() {
   currentQuestion = questionIndex;
   //set question text
   questionText.innerHTML = currentQuestion.q;
+  translationText.innerHTML = currentQuestion.translation;
   questionsAskedList.push(currentQuestion);
   setTimeout(speak, 500);
 
@@ -152,6 +155,7 @@ function getResult(element) {
   }
   attempt++;
   nextButton.classList.remove("hide");
+  translationText.classList.remove("hide");
 }
 
 //add shortcut key for the return key to go to the next question
@@ -237,7 +241,12 @@ function displayQuestions() {
         questionAskedCell.innerHTML = questionsAskedList[i].q;
     //   }
       questionAskedCell.setAttribute("data-cell", "Question: ");
-  
+
+      //create a table cell to show the English translation
+      const translationCell = document.createElement("td");
+      translationCell.innerHTML = questionsAskedList[i].translation;
+      translationCell.setAttribute("data-cell", "Translation: ");
+
       // create a table cell to show the given answer
       const yourAnswerCell = document.createElement("td");
       yourAnswerCell.innerHTML = yourAnswersList[i];
@@ -250,7 +259,6 @@ function displayQuestions() {
   
       //create a table cell to show if the given answer was right or wrong
       const resultCell = document.createElement("td");
-      // resultCell.innerHTML = "<p>Hello</p>";
       if(yourAnswerCell.innerHTML === correctAnswerCell.innerHTML) {
         resultCell.innerHTML = "<img src='./images/correct.png' alt = 'correct' width='30'/>";
         resultCell.classList.add("correct");
@@ -261,6 +269,7 @@ function displayQuestions() {
       //append the created cells to the question row
       questionRow.appendChild(questionNoCell);    
       questionRow.appendChild(questionAskedCell);
+      questionRow.appendChild(translationCell);
     //   questionRow.appendChild(yourAnswerCell);
     //   questionRow.appendChild(correctAnswerCell);
       questionRow.appendChild(resultCell);

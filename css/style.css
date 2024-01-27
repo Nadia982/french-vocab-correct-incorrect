@@ -51,12 +51,12 @@
     display: none;
   }
   
-  button.option {
+  /* button.option {
     display: block;
     width: 100%;
     border: none;
     text-align: left;
-  }
+  } */
   
   button:disabled {
     /* background: inherit; */
@@ -123,12 +123,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
     margin-bottom: 1rem;
   }
-  .quiz-box .question-text {
-    font-size: 3rem;
-    flex: 0 0 60%;
+  .quiz-box .question-text, .quiz-box .translation-text {
+    font-size: 2rem;
+    width: 50%;
     color: #000;
     line-height: var(--line-height);
     /* padding: .8rem 0; */
@@ -139,18 +139,24 @@
   .quiz-box .question-text img {
     max-width: 100%;
     display: block;
-    /* margin-top: 1rem; */
   }
+
+.do-you-know {
+  margin-bottom: 1rem;
+  font-size: 1.2em;
+}
   
   #read-btn {
-    height: 3rem;
-    flex: 0 1 40%;
+    min-height: 3rem;
+    flex: 0 2 10vw;
     text-align: center;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem ;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.7rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
   }
   
   #voice-select {
@@ -201,6 +207,7 @@
   .quiz-box .option-container{
     display: flex;
     gap: 2rem;
+    width: 50%;
   }
 
   .quiz-box .option-container .option.correct {
@@ -277,20 +284,19 @@
 
   .result-box table {
     width: 90%;
-    max-width: 350px;
+    max-width: 400px;
     border-collapse: collapse;
     margin: 1rem auto;
   }
   .result-box table td, .result-box table th {
     border: 1px solid #ccc;
     text-align: left;
-    padding: 0 1rem;
+    padding: 0 .3rem;
   }
 
   .result-box table td:first-child, .result-box table td:last-child, .result-box table th:first-child, .result-box table th:last-child {
     border: 1px solid #ccc;
     text-align: center;
-    padding: 0;
   }
 
   .result-box table img {
@@ -316,15 +322,15 @@
     margin: 0.1rem;
   }
   
-  .result-box.hide {
+  .result-box.hide, .quiz-box.hide {
     display: none;
   }
   
-  .quiz-box.hide {
-    display: none;
+  .translation-text.hide {
+    visibility: hidden;
   }
-  
-  @media (max-width: 768px) {
+
+  @media (max-width: 480px) {
     th {
       display: none;
     }
@@ -363,10 +369,6 @@
   @media (max-width: 480px) {
     .result-box .btn {
       margin-bottom: 1 rem;
-    }
-  
-    body {
-      padding: 1rem;
     }
   
     .custom-box {
