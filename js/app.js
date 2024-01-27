@@ -142,16 +142,16 @@ function getResult(element) {
     updateAnswerIndicator("incorrect");
 
     //if answer is incorrect then show the correct answer
-    const optionsLength = optionContainer.children.length;
-    for (let i = 0; i < optionsLength; i++) {
-      setTimeout(() => {
-        if (
-          parseInt(optionContainer.children[i].id) === currentQuestion.answer
-        ) {
-          optionContainer.children[i].classList.add("correct");
-        }
-      }, 400);
-    }
+    // const optionsLength = optionContainer.children.length;
+    // for (let i = 0; i < optionsLength; i++) {
+    //   setTimeout(() => {
+    //     if (
+    //       parseInt(optionContainer.children[i].id) === currentQuestion.answer
+    //     ) {
+    //       optionContainer.children[i].classList.add("correct");
+    //     }
+    //   }, 400);
+    // }
   }
   attempt++;
   nextButton.classList.remove("hide");
