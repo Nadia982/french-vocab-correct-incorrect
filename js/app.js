@@ -9,8 +9,8 @@ const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
 const nextButton = document.querySelector(".next-btn");
 const button = document.querySelector(".btn");
-// questionLimit = 2;
-const questionLimit = questions.length;
+questionLimit = 30;
+// const questionLimit = questions.length;
 const questionsAskedContainer = document.querySelector(".questions-asked-container");
 
 
