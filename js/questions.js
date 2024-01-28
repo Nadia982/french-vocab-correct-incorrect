@@ -672,7 +672,76 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-
+  {
+    id: 97,
+    q: "les personnes qui sont emprisonnées à tort",
+    translation: "people who have been wrongly imprisoned",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 98,
+    q: "les enfants qui n'ont pas assez à manger",
+    translation: "children who don't have enough to eat",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 99,
+    q: "On peut..",
+    translation: "you can...",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 100,
+    q: "Il est possible de ...",
+    translation: "It is possible to...",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 101,
+    q: "parrainer un enfant en Afrique",
+    translation: "sponsor a child in Africa",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 102,
+    q: "faire un don à une association caritative",
+    translation: "donate to a charity",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 103,
+    q: "faire du bénévolat",
+    translation: "do voluntary work",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 104,
+    q: "Il faut ...",
+    translation: "We must/you have to ...",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 105,
+    q: "lutter contre la faim",
+    translation: "fight against hunger/famine",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 106,
+    q: "lancer des pétitions",
+    translation: "launch petitions",
+    options: ["yes", "no"],
+    answer: 0,
+  },
   // {
   //   id: [],
   //   q: "exampleToCopy",
@@ -693,3 +762,4 @@ const questions = [
   //   img: "img/square.jpg"
   //   }
 ];
+
