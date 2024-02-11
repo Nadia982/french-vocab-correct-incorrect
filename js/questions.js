@@ -6,20 +6,20 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-  {
-    id: 2,
-    q: "le bain",
-    translation: "the bath",
-    options: ["yes", "no"],
-    answer: 0,
-  },
-  {
-    id: 3,
-    q: "la boîte (en carton)",
-    translation: "the (cardboard) box",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 2,
+  //   q: "le bain",
+  //   translation: "the bath",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
+  // {
+  //   id: 3,
+  //   q: "la boîte (en carton)",
+  //   translation: "the (cardboard) box",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   // {
   //   id: 4,
   //   q: "le centre de recyclage",
@@ -76,13 +76,13 @@ const questions = [
   //   options: ["yes", "no"],
   //   answer: 0,
   // },
-  {
-    id: 12,
-    q: "le sans-abri",
-    translation: "the homeless person",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 12,
+  //   q: "le sans-abri",
+  //   translation: "the homeless person",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   {
     id: 13,
     q: "sauver",
@@ -104,13 +104,13 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-  {
-    id: 16,
-    q: "l'environnement",
-    translation: "the environment",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 16,
+  //   q: "l'environnement",
+  //   translation: "the environment",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   {
     id: 17,
     q: "éteindre",
@@ -118,13 +118,13 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-  {
-    id: 18,
-    q: "faire du recyclage",
-    translation: "to recycle",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 18,
+  //   q: "faire du recyclage",
+  //   translation: "to recycle",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   {
     id: 19,
     q: "gaspiller",
@@ -153,13 +153,13 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-  {
-    id: 23,
-    q: "la pauvreté",
-    translation: "poverty",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 23,
+  //   q: "la pauvreté",
+  //   translation: "poverty",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   {
     id: 24,
     q: "le pétrole",
@@ -167,13 +167,13 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-  {
-    id: 25,
-    q: "la piste cyclable",
-    translation: "the cycle route",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 25,
+  //   q: "la piste cyclable",
+  //   translation: "the cycle route",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   {
     id: 26,
     q: "pollué",
@@ -225,7 +225,7 @@ const questions = [
   },
   {
     id: 33,
-    q: "C’est quelle personne ?",
+    q: "C'est quelle personne ?",
     translation: "Which person is it? ",
     options: ["yes", "no"],
     answer: 0,
@@ -295,7 +295,7 @@ const questions = [
   },
   {
     id: 43,
-    q: "Décidez si c’est Vrai (V), Faux (F) ou Pas Mentionné (PM). Ecrivez V, F ou PM.",
+    q: "Décidez si c'est Vrai (V), Faux (F) ou Pas Mentionné (PM). Ecrivez V, F ou PM.",
     translation:
       "Decide if it is True (V), False (F) or Not Mentioned (PM). Write V, F or PM.",
     options: ["yes", "no"],
@@ -308,13 +308,13 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-  {
-    id: 45,
-    q: "Ecoutez ce passage",
-    translation: "Listen to this passage",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 45,
+  //   q: "Ecoutez ce passage",
+  //   translation: "Listen to this passage",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   {
     id: 46,
     q: "Ecoutez cette conversation",
@@ -366,7 +366,7 @@ const questions = [
   },
   {
     id: 53,
-    q: "Il n’est pas nécessaire d’écrire en phrases complètes.",
+    q: "Il n'est pas nécessaire d'écrire en phrases complètes.",
     translation: "It is not necessary to write in full sentences",
     options: ["yes", "no"],
     answer: 0,
