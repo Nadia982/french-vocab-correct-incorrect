@@ -406,13 +406,13 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-  {
-    id: 59,
-    q: "Pour une opinion positive et négative, écrivez P+N",
-    translation: "For a positive and negative opinion, write P+N",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 59,
+  //   q: "Pour une opinion positive et négative, écrivez P+N",
+  //   translation: "For a positive and negative opinion, write P+N",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   // {
   //   id: 60,
   //   q: "Quelle est la réponse correcte ?",
@@ -911,13 +911,13 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-  {
-    id: 131,
-    q: "Actuellement, je ne fais pas grand-chose pour protéger l'environnement.",
-    translation: "Currently, I don't do much to protect the environment.",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 131,
+  //   q: "Actuellement, je ne fais pas grand-chose pour protéger l'environnement.",
+  //   translation: "Currently, I don't do much to protect the environment.",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   {
     id: 132,
     q: "Je fais déjà pas mal de choses.",
@@ -1566,8 +1566,8 @@ const questions = [
   },
   {
     id: 224,
-    q: "tu aimes …?",
-    translation: "do you like …? (informal)",
+    q: "Est-ce que tu aimes …?",
+    translation: "Do you like …? (informal)",
     options: ["yes", "no"],
     answer: 0,
   },
