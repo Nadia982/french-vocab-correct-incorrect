@@ -1950,7 +1950,6 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-
   {
     id: 279,
     q: "aujourd'hui",
@@ -1958,6 +1957,77 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
+  {
+    id: 280,
+    q: "marcher",
+    translation: "to walk/walking",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 281,
+    q: "jouer",
+    translation: "playing/to play",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 282,
+    q: "rigoler",
+    translation: "having fun/to have fun",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 283,
+    q: "il/elle est...",
+    translation: "he/she is...",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 284,
+    q: "ils/elles sont...",
+    translation: "They are...",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 285,
+    q: "en plein air",
+    translation: "outside",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 286,
+    q: "à la maison",
+    translation: "at home",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 287,
+    q: "en ville",
+    translation: "in town",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 288,
+    q: "au parc",
+    translation: "in the park",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+  {
+    id: 289,
+    q: "au collège",
+    translation: "at school",
+    options: ["yes", "no"],
+    answer: 0,
+  },
+
 
   // {
   //   id: 260,
