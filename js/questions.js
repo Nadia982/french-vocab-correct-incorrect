@@ -399,13 +399,13 @@ const questions = [
   //   options: ["yes", "no"],
   //   answer: 0,
   // },
-  {
-    id: 58,
-    q: "Pour une opinion positive, écrivez P",
-    translation: "For a positive opinion, write P",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 58,
+  //   q: "Pour une opinion positive, écrivez P",
+  //   translation: "For a positive opinion, write P",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   // {
   //   id: 59,
   //   q: "Pour une opinion positive et négative, écrivez P+N",
@@ -511,13 +511,13 @@ const questions = [
   //   options: ["yes", "no"],
   //   answer: 0,
   // },
-  {
-    id: 74,
-    q: "mes amis",
-    translation: "my friends",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 74,
+  //   q: "mes amis",
+  //   translation: "my friends",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   {
     id: 75,
     q: "Ce qui me préoccupe le plus c'est...",
@@ -833,13 +833,13 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-  {
-    id: 120,
-    q: "la guerre",
-    translation: "war",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 120,
+  //   q: "la guerre",
+  //   translation: "war",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   {
     id: 121,
     q: "la pollution de l'air",
@@ -1599,13 +1599,13 @@ const questions = [
     options: ["yes", "no"],
     answer: 0,
   },
-  {
-    id: 229,
-    q: "utilisez-vous …?",
-    translation: "do you use …? (formal)",
-    options: ["yes", "no"],
-    answer: 0,
-  },
+  // {
+  //   id: 229,
+  //   q: "utilisez-vous …?",
+  //   translation: "do you use …? (formal)",
+  //   options: ["yes", "no"],
+  //   answer: 0,
+  // },
   {
     id: 230,
     q: "comment",
